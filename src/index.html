@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macOS Setup Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>🚀 macOS Setup Manager</h1>
+            <div class="header-actions">
+                <button id="loadScript" class="btn btn-secondary">Carregar Script</button>
+                <button id="exportScript" class="btn btn-primary">Exportar Script</button>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab active" data-tab="homebrew">📦 Homebrew</button>
+            <button class="tab" data-tab="mas">📱 Mac App Store</button>
+            <button class="tab" data-tab="configs">⚙️ Configurações</button>
+            <button class="tab" data-tab="preview">👁️ Preview</button>
+        </nav>
+
+        <main class="main-content">
+            <div id="homebrew" class="tab-content active">
+                <div class="browse-section">
+                    <h2>📦 Explorar Pacotes</h2>
+                    <p>Encontre pacotes e aplicativos para adicionar ao seu setup:</p>
+                    <div class="browse-buttons">
+                        <button id="browseFormulae" class="btn btn-secondary">🍺 Browse Formulae</button>
+                        <button id="browseCasks" class="btn btn-secondary">📦 Browse Casks</button>
+                        <button id="browseSearch" class="btn btn-secondary">🔍 Pesquisar Pacotes</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Taps</h2>
+                    <div class="package-list" id="tapsList"></div>
+                    <div class="add-package">
+                        <input type="text" id="newTap" placeholder="Ex: homebrew/cask-fonts">
+                        <button id="addTap" class="btn btn-small">Adicionar Tap</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Brew Packages</h2>
+                    <div class="package-list" id="brewsList"></div>
+                    <div class="add-package">
+                        <input type="text" id="newBrew" placeholder="Ex: git">
+                        <button id="addBrew" class="btn btn-small">Adicionar Package</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Casks</h2>
+                    <div class="package-list" id="casksList"></div>
+                    <div class="add-package">
+                        <input type="text" id="newCask" placeholder="Ex: visual-studio-code">
+                        <button id="addCask" class="btn btn-small">Adicionar Cask</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mas" class="tab-content">
+                <div class="section">
+                    <h2>Mac App Store Apps</h2>
+                    <div class="package-list" id="masAppsList"></div>
+                    <div class="add-package">
+                        <input type="text" id="newMasId" placeholder="App ID (ex: 1453504509)">
+                        <input type="text" id="newMasName" placeholder="Nome do App">
+                        <button id="addMasApp" class="btn btn-small">Adicionar App</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="configs" class="tab-content">
+                <div class="section">
+                    <h2>Configurações do Sistema</h2>
+                    <div class="configs-list" id="configsList"></div>
+                </div>
+            </div>
+
+            <div id="preview" class="tab-content">
+                <div class="section">
+                    <div class="preview-header">
+                        <h2>Preview do Script</h2>
+                        <div class="preview-actions">
+                            <button id="generateScript" class="btn btn-secondary">Gerar do Config</button>
+                            <button id="saveManualScript" class="btn btn-primary">Salvar Edição</button>
+                        </div>
+                    </div>
+                    <textarea id="scriptPreview" placeholder="O script aparecerá aqui..."></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="parser.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
