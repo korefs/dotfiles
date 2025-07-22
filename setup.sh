@@ -187,6 +187,7 @@ brew "ripgrep"
 brew "zoxide"
 brew "starship"
 brew "neovim"
+brew "bat"
 
 # Development Tools
 brew "pyenv"
