@@ -1,43 +1,98 @@
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
+# Taps
+tap "hashicorp/tap"
 
-# Dev tools
+# Essential CLI Tools
+brew "git"
+brew "wget"
+brew "htop"
+brew "tree"
+brew "jq"
+brew "fzf"
+brew "ripgrep"
+brew "zoxide"
+brew "starship"
+brew "neovim"
+
+# Development Tools
 brew "pyenv"
 brew "rustup-init"
-brew "git"
-brew "ffmpeg"
-brew "fprobe"
-brew "mongosh"
-brew "yt-dlp"
-brew "wget"
+brew "go"
 brew "nvm"
-brew "aircrack-ng"
-brew "nmap"
-brew "sqlmap"
-brew "pngcheck"
-brew "binwalk"
-brew "fcrackzip"
-brew "netpbm"
-brew "imagemagick"
-brew "gs"
-# brew "openssh"
+brew "kubernetes-cli"
+brew "helm"
 
-# Apps
-cask "raycast"
+# Media & Network Tools
+brew "ffmpeg"
+brew "yt-dlp"
+brew "nmap"
+brew "aircrack-ng"
+
+# Security & Analysis
+brew "sqlmap"
+brew "binwalk"
+brew "pngcheck"
+brew "fcrackzip"
+brew "imagemagick"
+brew "exiftool"
+
+# Database
+brew "mongosh"
+brew "postgresql@14"
+brew "redis"
+brew "mysql"
+
+# .NET
+brew "dotnet"
+
+# Development Applications
 cask "visual-studio-code"
-cask "iterm2"
-cask "docker"
-cask "font-fira-code"
-cask "google-chrome"
-cask "postman-agent"    
-cask "zen"
-cask "claude"
-cask "motrix"
-caks "whatsapp"
-cask "discord"
-cask "spotify"
-cask "obsidian"
-cask "notion"
-cask "microsoft-azure-storage-explorer"
+cask "cursor"
 cask "warp"
-cask "wireshark"
+cask "docker"
+cask "postman"
+cask "microsoft-azure-storage-explorer"
+
+# Browsers
+cask "google-chrome"
+cask "arc"
+cask "zen"
+
+# Communication
+cask "whatsapp"
+cask "discord"
+cask "microsoft-teams"
+
+# Productivity
+cask "raycast"
+cask "notion"
+cask "obsidian"
+cask "todoist"
+cask "claude"
+
+# Design
+# cask "figma"
+cask "sketch"
+
+# Utilities
+cask "the-unarchiver"
+cask "appcleaner"
+cask "motrix"
+cask "keka"
+# cask "bartender"
+cask "rectangle"
+cask "karabiner-elements"
+
+# Cloud Storage
+cask "google-drive"
+cask "dropbox"
+
+# Entertainment
+cask "spotify"
+cask "plex"
+
+# Fonts
+cask "font-fira-code"
+cask "font-jetbrains-mono"
+cask "font-sf-mono"
+cask "font-cascadia-code"
+cask "font-victor-mono"
