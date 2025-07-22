@@ -323,7 +323,6 @@ plugins=(
     node
     npm
     yarn
-    pnpm
     python
     rust
     golang
@@ -340,8 +339,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR='code'
 
 # Aliases
-alias ll='exa -la'
-alias ls='exa'
 alias cat='bat'
 alias cd='z'
 alias vim='nvim'
@@ -363,14 +360,14 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # Rust
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
