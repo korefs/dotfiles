@@ -175,6 +175,7 @@ if [[ ! -f "Brewfile" ]]; then
     cat > Brewfile << 'EOF'
 # Taps
 tap "hashicorp/tap"
+tap "azure/functions"
 
 # Essential CLI Tools
 brew "git"
@@ -196,6 +197,7 @@ brew "go"
 brew "nvm"
 brew "kubernetes-cli"
 brew "helm"
+brew "azure-functions-core-tools@4"
 
 # Media & Network Tools
 brew "ffmpeg"
