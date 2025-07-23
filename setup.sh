@@ -179,6 +179,7 @@ tap "azure/functions"
 
 # Essential CLI Tools
 brew "git"
+brew "gemini-cli"
 brew "wget"
 brew "htop"
 brew "tree"
