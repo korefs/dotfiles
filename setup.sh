@@ -522,7 +522,7 @@ defaults write com.apple.dock tilesize -int 40
 
 # Enable magnification
 defaults write com.apple.dock magnification -bool true
-defaults write com.apple.dock largesize -int 64
+defaults write com.apple.dock largesize -int 63
 
 # Position on left
 #defaults write com.apple.dock orientation -string "left"
@@ -587,7 +587,7 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screencapture target clipboard
 
 # Hide all desktop icons
-defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder CreateDesktop -bool true
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
@@ -606,8 +606,9 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 2
+# Set a shorter delay until repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Enable full keyboard access for all controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
